@@ -1,0 +1,34 @@
+.bottom__header {
+    background: linear-gradient(rgba(103, 195, 243, 1), rgba(90, 152, 242, 1));
+    width: auto;
+    height: 165px;
+}
+
+.bh__element {
+    position: absolute;
+    top: 2625px;
+    right: 1360px;
+}
+
+.bottom__logo {
+    margin-top: 70px;
+    margin-left: 270px;
+}
+
+.bottom__nav ul {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 2630px;
+    left: 750px;
+    font-family: "Roboto", "Arial", sans-serif;
+}
+
+.bottom__nav-item a {
+    margin-right: 180px;
+}
+
+.bottom {
+    display: flex;
+    color: #ffffff;
+}
