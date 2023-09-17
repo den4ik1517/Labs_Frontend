@@ -1,0 +1,8 @@
+@import "./normalize.min.css";
+@import "./globals.css";
+@import "./header.css";
+@import "./download.css";
+@import "./cards.css";
+@import "./customer.css";
+@import "./footer.css";
+@import "./animations.css"

@@ -1,0 +1,120 @@
+.download-block {
+    display: flex;
+    padding-top: 150px;
+}
+
+@media screen and (max-width: 768px) {
+    .download-block {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.download-info {
+    margin-bottom: 35px;
+    margin-top: 25px;
+}
+
+.download-hr {
+    width: 13%;
+    text-align: left;
+    margin-left: 0;
+    border: none;
+    border-top: 2px solid black;
+    margin-bottom: 35px;
+}
+
+.download-title {
+    width: 230px;
+    margin-bottom: 35px;
+    font-size: 25px;
+    animation-name: title_color;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+.btn-download {
+    background-color: white;
+    color: #458FF6;
+    border: 2px solid #458FF6;
+    width: 200px;
+    height: 56px;
+    border-radius: 30px;
+    animation-name: btn-pulsing;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.btn-download:hover {
+    background-color: #458FF6;
+    color: white;
+}
+
+.dwn-img {
+    margin-left: 9px;
+}
+
+.dot-img {
+    height: 110px;
+    width: 120px;
+    float: right;
+}
+
+@media screen and (max-width: 768px) {
+    .dot-img {
+        margin: 30px 170px 50px 0;
+    }
+}
+
+.download-text {
+    margin-bottom: 35px;
+    width: 360px;
+}
+
+.download-image img {
+    font-size: 40px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .download-title {
+        width: 320px;
+        font-size: 37px;
+
+        margin: 0px 20px 35px 40px;
+    }
+
+    .download-hr {
+        margin-left: 40px;
+        width: 15%;
+    }
+
+    .download-text {
+        width: 320px;
+        font-size: 17px;
+        margin: 0px 20px 35px 40px;
+    }
+
+    .btn-download {
+        margin-left: 40px;
+    }
+
+    .download-image img {
+        width: 350px;
+    }
+
+    .dot-img {
+        margin: 30px 46px 50px 0;
+        width: 90px;
+        height: 80px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .download-title {
+        width: 300px;
+        font-size: 20px;
+        margin: 0, 20px, 0, 20px;
+    }
+}

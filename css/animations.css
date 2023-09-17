@@ -1,0 +1,46 @@
+@keyframes btn-pulsing {
+    0% {
+        opacity: 100%;
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes color_text {
+    0% {
+        color: #458FF6;
+    }
+
+    25% {
+        color: #1f4c8a;
+    }
+
+    50% {
+        color: #0a1729;
+    }
+
+    75% {
+        color: #1f4c8a;
+    }
+
+    100% {
+        color: #458FF6;
+    }
+}
+
+@keyframes title_color {
+    0% {
+        color: black;
+    }
+
+    50% {
+        color: rgb(54, 56, 129);
+    }
+
+    100% {
+        color: black;
+    }
+
+}

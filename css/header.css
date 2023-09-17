@@ -1,0 +1,79 @@
+header {
+  width: 100%;
+  position: fixed;
+  padding: 3px;
+  background-color: white;
+  z-index: 10;
+}
+
+#nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+#nav-links a {
+  font-size: 20px;
+  margin-right: 60px;
+  opacity: 0.5;
+  color: black;
+}
+
+.heaader-link {
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.topnav a.icon {
+  display: flex;
+  position: absolute;
+  top: 0;
+  margin: 10px;
+}
+
+.icon {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .topnav a {
+    padding: 14px 16px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 37px;
+    display: block;
+  }
+
+  .topnav a.icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    display: flex;
+    background-image: url(../images/ios-menu.svg);
+    background-repeat: no-repeat;
+  }
+
+  .topnav a:hover {
+    background-color: #ddd;
+  }
+
+  #nav-links {
+    display: none;
+    background-color: linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
+    margin-top: 20px;
+  }
+}
+
+.header-logo {
+  float: right;
+  margin-right: 70px;
+  margin-left: 100px;
+}

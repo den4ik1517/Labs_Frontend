@@ -1,0 +1,149 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+
+<head>
+  <title>Hello World</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container topnav">
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+      </a>
+      <div class="header-logo">
+        <img src="images/logo.png">
+      </div>
+      <nav id="nav-links">
+        <a href="">Home</a>
+        <a href="">Find a doctor</a>
+        <a href="">Apps</a>
+        <a href="">Testimonials</a>
+        <a href="">About us</a>
+      </nav>
+    </div>
+  </header>
+  <div class="container download-block">
+    <div class="download-info">
+      <h1 class="download-title">Download our mobile apps</h1>
+      <hr class="download-hr">
+      <p class="download-text">Our dedicated patient engagement app and web portal allow you to
+        access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely</p>
+      <button class="btn-download">Download <img src="images/Vector.png" alt="test" class="dwn-img"></button>
+    </div>
+    <div>
+      <div class="download-image">
+        <img src="images/trafalgar-illustration sec03 1.png">
+      </div>
+      <img src="images/element.png" class="dot-img">
+    </div>
+  </div>
+  <div class="backround-img">
+    <div>
+    </div>
+    <div class="container">
+      <div class="cards">
+        <div class="check-title">
+          <h1>Check out latest article</h1>
+          <hr class="hr-check">
+        </div>
+        <div class="cards-block">
+          <div class="card-block">
+            <div class="img">
+              <img src="images/image 2.png" style="border-radius: 30px 30px 0 0;">
+            </div>
+            <div class="block-text">
+              <h3 class="card-title">Disease detection, check up in the laboratory</h3>
+              <p class="card-description">In this case, the role of the health laboratory is very important to do a
+                disease detection...</p>
+              <div style="margin-bottom: 30px">
+                <a class="card-link" href="">Read more <img src="images/Vector (1).png " alt="test" class="crd-img"></a>
+              </div>
+            </div>
+          </div>
+          <div class="card-block">
+            <div class="img">
+              <img src="images/image 2 (1).png" style="border-radius: 30px 30px 0 0;">
+            </div>
+            <div class="block-text">
+              <h3 class="card-title">Herbal medicines that are safe for consumption</h3>
+              <p class="card-description">Herbal medicine is very widely used at this time because of its very good for
+                your health...</p>
+              <div style="margin-bottom: 30px">
+                <a class="card-link" href="">Read more <img src="images/Vector (1).png" alt="test" class="crd-img"></a>
+              </div>
+            </div>
+          </div>
+          <div class="card-block">
+            <div class="img">
+              <img src="images/image 3.png" style="border-radius: 30px 30px 0 0;">
+            </div>
+            <div class="block-text">
+              <h3 class="card-title">Natural care for healthy facial skin</h3>
+              <p class="card-description">A healthy lifestyle should start from now and also for your skin health. There
+                are some...</p>
+              <div style="margin-bottom: 30px">
+                <a class="card-link" href="">Read more <img src="images/Vector (1).png" alt="test" class="crd-img"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block-btn-view">
+          <button class="btn-download">View all</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="customer-block">
+    <img>
+    <div class="container customer-info">
+      <h1 class="customer-title">What our customer are saying</h1>
+      <hr class="customer-hr">
+      <div class="customer">
+        <div><img src="images/image 1.png" class="customer-img"></div>
+        <div class="customer-inf">
+          <h3 class="customer-name">Edward Newgate</h3>
+          <p class="customer-text">Founder Circle</p>
+        </div>
+        <div>
+          <p class="customer-speech">“Our dedicated patient engagement app and web portal
+            allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and
+            securely”</p>
+        </div>
+      </div>
+    </div>
+    <div class="cs-img">
+      <img src="images/arrow nav.png">
+    </div>
+  </div>
+  <footer class="footer-block">
+    <img src="images/element.png" class="dot-foot-img">
+    <div class="footer-logo">
+      <img src="images/trafalgar.png">
+    </div>
+    <div class="footer-link-block">
+      <div class="footer-item">
+        <a class="footer-link" href="">Company</a>
+      </div>
+      <div class="footer-item">
+        <a class="footer-link" href="">Region</a>
+      </div>
+      <div class="footer-item">
+        <a class="footer-link" href="">Help</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      let nav_links = document.getElementById("nav-links");
+      if (nav_links.style.display === "block") {
+        nav_links.style.display = "none";
+      } else {
+        nav_links.style.display = "block";
+      }
+    }
+  </script>
+</body>
+
+</html>

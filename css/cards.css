@@ -1,0 +1,128 @@
+.check-title h1 {
+    text-align: center;
+    margin-top: 211px;
+    animation-name: title_color;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+.hr-check {
+    width: 4%;
+    text-align: center;
+    border: none;
+    border-top: 2px solid black;
+    margin-bottom: 35px;
+}
+
+.cards-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 350px;
+    margin-bottom: 50px;
+    margin-top: 60px;
+}
+
+.card-block {
+    box-shadow: rgba(194, 201, 209, 0.2) 5px 9px 24px;
+    border-radius: 30px;
+    margin-right: 70px;
+    background-color: white;
+}
+
+.block-text {
+    text-align: left;
+    padding: 15px 71px 15px 34px;
+    max-width: 230px;
+}
+
+.card-description {
+    width: 240px;
+    margin-bottom: 40px;
+}
+
+.card-link {
+    border: none;
+    color: #458FF6;
+    animation-name: color_text;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.block-text a:hover {
+    color: rgb(21, 9, 81);
+    font-weight: bold;
+}
+
+.crd-img {
+    margin-left: 9px;
+}
+
+.backround-img {
+    background-image: url(../images/background-cards.png);
+    background-position: right 70px;
+    background-repeat: no-repeat;
+    height: 600px;
+    margin-top: 150px;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .cards-block {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .backround-img {
+        background-image: none;
+    }
+
+    .card-block {
+        box-shadow: rgba(35, 117, 210, 0.2) 5px 9px 24px;
+        margin-bottom: 15px;
+        margin-right: 0;
+        width: 486px;
+    }
+
+    .card-block .img img {
+        width: 450px;
+    }
+
+    .card-title,
+    .card-description,
+    .card-link {
+        font-size: 30px;
+    }
+}
+
+.block-btn-view {
+    display: flex;
+    justify-content: center;
+    animation-name: btn-pulsing;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@media only screen and (max-width: 768px) {
+    .card-block {
+        width: 290px;
+    }
+
+    .card-block .img img {
+        width: 290px;
+    }
+
+    .card-title {
+        font-size: 26px;
+        width: 129%;
+    }
+
+    .card-description {
+        font-size: 20px;
+    }
+
+    .card-link {
+        font-size: 25px;
+    }
+}
