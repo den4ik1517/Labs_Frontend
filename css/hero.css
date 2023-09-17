@@ -1,0 +1,43 @@
+.hero__title {
+    width: 240px;
+    height: 80px;
+    color: #000;
+    margin-left: 30px;
+    margin-right: 0px;
+}
+
+.hero__bg {
+    width: 665px;
+    height: 430px;
+    padding-right: 250px;
+}
+
+.hero__button {
+    width: 200px;
+    height: 56px;
+    border: 1px solid #458FF6;
+    background: white;
+    border-radius: 999px;
+    box-sizing: border-box;
+    color: #458FF6;
+    cursor: pointer;
+    font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    word-break: break-word;
+    margin-top: 43px;
+}
+
+.hero__element {
+    position: absolute;
+    top: 665px;
+    left: 1345px;
+    color: #93C1F9;
+}

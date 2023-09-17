@@ -1,0 +1,16 @@
+.header__nav ul {
+    display: flex;
+}
+
+.header__nav-item {
+    margin-right: 40px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 160px;
+    margin-top: 75px;
+}
+
