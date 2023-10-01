@@ -1,0 +1,19 @@
+body {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1259px;
+  max-height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0;
+    margin-left: -10px;
+  }
+}
