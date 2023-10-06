@@ -1,5 +1,3 @@
-// Dom functions
-
 const object_container = document.getElementById("orders_list");
 const nameInput = document.getElementById("name_input");
 const destinationInput = document.getElementById("destination_input");
@@ -7,26 +5,32 @@ const brandInput = document.getElementById("brand_input");
 const order_dateInput = document.getElementById("order_date_input");
 const priceInput = document.getElementById("price_input");
 const input_search = document.getElementById("input_search")
-const count_price = document.getElementById("count_price")
+const count_price = document.getElementById("count_price");
 
+const edit_name_input = document.getElementById("edit_name_input");
+const edit_destinationInput = document.getElementById("edit_destination_input");
+const edit_brand_input = document.getElementById("edit_brand_input")
+const edit_order_date_input = document.getElementById("edit_order_date_input")
+const edit_price_input = document.getElementById("edit_price_input")
 
 let objects = [];
 let id = 0;
+let currentId = -1;
+let cuurenrDeleteId = -1;
 
 const object_template = ({ id, full_name, destination, car_brand, order_date, price }) => `
 <li id="${id}" class="item">
-    <div class="card">
+<div class="card">
     <h4 class="card-type">Name: ${full_name}</h4>
     <h4 class="card-price">Destination: ${destination}</h4>
     <h4 class="card-brand">Brand: ${car_brand}</h4>
     <h4 class="card-production-date">Date: ${order_date}</h4>
     <h4 class="card-production-date">Price: ${price}$</h4>
     <div class="block_btn">
-    <button id="edit_btn${id}" type="button" class="btn-primary btn_card" onclick="editFunc(${id})">
-        Edit
-    </button>
-    <button type="button" id="cancel_search_btn" class="btn_card_cansel">Delete</button></div>
+    <button id="edit_btn${id}" type="button" class="btn-primary btn_card" onclick="clickEdit(${id})">Edit</button>
+    <button type="button" id="delete_btn" class="btn_card_cansel" onclick="clickDelete(${id})">Delete</button>
     </div>
+</div>
 </li>`;
 
 const oject_count_template = (count) => `<h4>${count}$</h4>`
@@ -38,6 +42,13 @@ const clear_inputs = () => {
     priceInput.value = "";
 }
 
+const clear_edits = () => {
+    edit_name_input.value = "";
+    edit_destinationInput.value = "";
+    edit_brand_input.value = "";
+    edit_order_date_input.value = "";
+    edit_price_input.value = "";
+};
 
 const add_object_to_page = ({ id, full_name, destination, car_brand, order_date, price }) => {
     object_container.insertAdjacentHTML(
@@ -71,6 +82,16 @@ const get_values = () => {
     };
 };
 
+const getEditValues = () => {
+    return {
+        full_name: edit_name_input.value,
+        destination: edit_destinationInput.value,
+        car_brand: edit_brand_input.value,
+        order_date: edit_order_date_input.value,
+        price: edit_price_input.value,
+    };
+};
+
 
 const add_object = ({ full_name, destination, car_brand, order_date, price }) => {
     const new_object = {
@@ -87,24 +108,31 @@ const add_object = ({ full_name, destination, car_brand, order_date, price }) =>
 
 }
 
-// Event Block
 
 const add_button = document.getElementById("submit_btn")
 const search_button = document.getElementById("search_btn")
 const cancel_button = document.getElementById("cancel_search_btn")
 const sort_button = document.getElementById("sort_objects")
 const count_price_btn = document.getElementById("count_price_btn")
+const edit_btn = document.getElementById("edit_btn")
 
 add_button.addEventListener("click", (event) => {
-    // Prevents default page reload on submit
     event.preventDefault();
 
     const { full_name, destination, car_brand, order_date, price } = get_values();
-    add_object({ full_name, destination, car_brand, order_date, price })
-    toggleMainPage();
-    clear_inputs();
-})
+    if (full_name === "" || destination === "" || car_brand === "" || order_date === "" || price === "") {
+        alert("The fields must not be empty!");
+        return;
+    } else if (price <= 0) {
+        alert("The price must be positive!");
+        return;
+    } else {
+        add_object({ full_name, destination, car_brand, order_date, price })
+        toggleMainPage();
+        clear_inputs();
+    }
 
+})
 
 search_button.addEventListener("click", (event) => {
     const find_object = objects.filter(
@@ -144,14 +172,37 @@ count_price_btn.addEventListener("click", () => {
     add_count_price(count);
 })
 
+edit_btn.addEventListener("click", (event) => {
+    event.preventDefault();
+    const { full_name, destination, car_brand, order_date, price } = getEditValues();
+    if (full_name === "" || destination === "" || car_brand === "" || order_date === "" || price === "") {
+        alert("The fields must not be empty!");
+        return;
+    } else if (price <= 0) {
+        alert("The price must be positive!");
+        return;
+    } else {
 
-// Toggle functions
+        let edit_obj = objects.find(ob => ob.id === currentId);
+        edit_obj.full_name = full_name;
+        edit_obj.destination = destination;
+        edit_obj.car_brand = car_brand;
+        edit_obj.order_date = order_date;
+        edit_obj.price = price;
+
+        clear_edits();
+        toggleEdit();
+        object_list_search(objects);
+    }
+})
+
 
 const CLOSE_CLASSNAME = "close";
 const OPEN_CLASSNAME = "open";
 
 const mainPage = document.getElementById("main_page");
 const createPage = document.getElementById("create_page");
+const editPage = document.getElementById("edit_page")
 
 
 function toggleMainPage() {
@@ -171,4 +222,32 @@ function toggleCreatePage() {
     if (!createPage.classList.contains(OPEN_CLASSNAME)) {
         createPage.classList.add(OPEN_CLASSNAME);
     }
+}
+
+function toggleEdit() {
+    mainPage.classList.toggle(CLOSE_CLASSNAME);
+    editPage.classList.toggle(OPEN_CLASSNAME);
+}
+
+function clickEdit(current_id) {
+    toggleEdit();
+    currentId = current_id;
+    let current_obj = objects.find(ob => ob.id === currentId);
+
+    console.log(currentId);
+    edit_name_input.value = current_obj.full_name;
+    edit_destinationInput.value = current_obj.destination;
+    edit_brand_input.value = current_obj.car_brand;
+    edit_order_date_input.value = current_obj.order_date;
+    edit_price_input.value = current_obj.price;
+}
+
+function clickDelete(current_id) {
+    cuurenrDeleteId = current_id;
+    let current_obj = objects.find(ob => ob.id === current_id);
+    let index = objects.indexOf(current_obj);
+    if (index > -1) {
+        objects.splice(index, 1);
+    }
+    object_list_search(objects);
 }

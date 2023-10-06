@@ -47,7 +47,7 @@
             </ul>
         </div>
     </main>
-    <main id="create_page" class="create__container">
+    <main id="create_page" class="create_container">
         <form id="add_form" class="add-form">
             <h2>Create order for car</h2>
             <div class="create-block">
@@ -60,7 +60,7 @@
                     <option value="Shkoda">Shkoda</option>
                     <option value="Ford">Ford</option>
                     <option value="Kia">Kia</option>
-                    <option value="Opel">Opel</option>
+                    <option value="Oppel">Oppel</option>
                     <option value="Audi">Audi</option>
                 </select>
                 <span>Order date:</span>
@@ -71,7 +71,30 @@
             <button type="submit" class="btn-download" id="submit_btn">Add order</button>
         </form>
     </main>
-
+    <main id="edit_page" class="edit_container">
+        <form id="edit_form" class="add-form">
+            <h2>Edit order for car</h2>
+            <div class="create-block">
+                <span>Client full name</span>
+                <input type="text" placeholder="Client name.." id="edit_name_input">
+                <span>Destination</span>
+                <textarea type="text" placeholder="Destination.." id="edit_destination_input"></textarea>
+                <span>Car brand:</span>
+                <select id="edit_brand_input">
+                    <option value="Shkoda">Shkoda</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Kia">Kia</option>
+                    <option value="Oppel">Oppel</option>
+                    <option value="Audi">Audi</option>
+                </select>
+                <span>Order date:</span>
+                <input type="date" id="edit_order_date_input">
+                <span>Price:</span>
+                <input placeholder="Price in $" type="number" id="edit_price_input">
+            </div>
+            <button type="submit" class="btn-download" id="edit_btn">Edit order</button>
+        </form>
+    </main>
     <script src="js/index.js"></script>
 </body>
 
