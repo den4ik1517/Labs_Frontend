@@ -1,0 +1,224 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   background-color: linear-gradient(180deg, #F6FAFD 0%, #FFFFFF 19.4%);
+}
+
+.header_main {
+   padding: 0 1.5vw;
+   height: 10vh;
+   display: flex;
+   align-items: center;
+   background-color: #F8F8F8;
+   border: 1px solid #000;
+   border-radius: 0 0 11px 11px;
+}
+
+.header_main span {
+   font-size: 1.5rem;
+   font-family: "Source Sans Pro";
+   color: #000;
+   padding-right: 2px;
+}
+
+.nav_page {
+   display: flex;
+   width: 16%;
+   justify-content: space-between;
+   align-items: center;
+   list-style: none;
+   font-size: 1.3rem;
+   color: #000;
+   font-family: "Source Sans Pro";
+   height: 100%;
+}
+
+body main {
+   display: flex;
+   justify-content: space-between;
+}
+
+body main aside {
+   padding: 0px 50px 10px 45px;
+   width: 15%;
+   height: auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   border-right: #000 solid 5px;
+}
+
+#items_container {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: left;
+   padding-left: 30px;
+   list-style: none;
+   width: 75%;
+   height: 30%;
+}
+
+.item_card {
+   background-color: #000;
+   height: auto;
+   width: 30%;
+   margin: 1vw;
+   border: 1px solid #000;
+   font-family: Arimo;
+}
+
+.item_card img {
+   width: 100%;
+   height: auto;
+}
+
+.item_card h5 {
+   text-align: center;
+   font-size: 1.6rem;
+   color: #FFFFFF;
+}
+
+.item_card p {
+   align-items: center;
+   text-align: center;
+   font-size: 1.3rem;
+   color: #FFFFFF;
+}
+
+.div__btn {
+   display: flex;
+   justify-content: space-between;
+   padding: 1.5vw;
+}
+.btrn {
+   color: #FFFFFF;
+   font-family: Arimo;
+   font-size: 1.1rem;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: none;
+   text-align: center;
+   border: none;
+   border-radius: 7px;
+   padding: 0.5vw 0 0.5vw 0;
+   width: 45%;
+}
+
+.btrn__edit__btn {
+   background: green;
+}
+
+.btrn__remove__btn {
+   background: #D9534F;
+}
+.find_menu {
+   display: flex;
+   margin-left: auto;
+   width: 35vw;
+   justify-content: space-between;
+}
+
+.find_menu input {
+   color: #000000;
+   font-family: 'Source Sans Pro';
+   font-size: 1rem;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: none;
+   text-align: left;
+   padding: 10px;
+   background: white;
+   border: 1px solid #000;
+   border-radius: 5px;
+   width: 60%;
+}
+
+.btn {
+   font-family: 'Source Sans Pro';
+   font-size: 1rem;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: none;
+   text-align: center;
+   background: rgba(255, 255, 255, 0);
+   border: 1px solid #1dca5a;
+   border-radius: 8px;
+}
+
+.btn__find_button {
+   margin-left: 1vw;
+   color: green;
+   border: 1px solid green;
+   width: 20%;
+}
+
+.btn__cancel_find_button {
+   margin-left: 1vw;
+   color: red;
+   border: 1px solid red;
+   width: 22%;
+}
+
+.sort_section {
+   margin-top: 10%;
+   height: 35%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.sort_section h3 {
+   font-size: 2rem;
+   font-family: 'Source Sans Pro';
+}
+
+.sort_section div label {
+   font-size: 1.5rem;
+}
+
+#sort_button {
+   background-color: #000;
+   font-family: 'Source Sans Pro';
+   border: 0px;
+   border-radius: 7px;
+   height: 25%;
+   font-style: bold;
+   font-size: 2rem;
+   color: #FFFFFF;
+   margin-top: 2vh;
+}
+
+#press {
+   background-color: #000;
+   border: 0px;
+   width: 100%;
+   border-radius: 7px;
+   height: 135%;
+   font-style: bold;
+   font-size: 1.5rem;
+   color: #FFFFFF;
+}
+
+.count {
+   margin-top: 5vh;
+   display: flex;
+   flex-direction: column;
+   height: 25%;
+   justify-content: space-between;
+}
+
+.count h3 {
+   font-family: 'Source Sans Pro';
+   font-size: 1.18rem;
+   text-align: center;
+}
+
+#count {
+   font-family: 'Source Sans Pro';
+   font-size: 2.5rem;
+   text-align: center;
+}

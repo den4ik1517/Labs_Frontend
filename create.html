@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Lab 5</title>
+   <link rel="stylesheet" href="./css/stylecreate.css">
+</head>
+
+<body>
+   <header class="header">
+      <span> My app </span>
+      <nav class="nav_page">
+         <li onclick="document.location.href='./index.html'">My Camera</li>
+         <li>Create Camera</li>
+      </nav>
+   </header>
+
+   <main class="main">
+      <h1>Create Camera</h1>
+      <div class="input_data">
+         <label> Name </label>
+         <input type="text" id="name_input" >
+      </div>
+      <div class="input_data">
+         <label> Memory </label>
+         <input type="number" id="memory_input" >
+      </div>
+      <div class="input_data">
+         <label>Zoom</label>
+         <input type="number" id="zoom_input" >
+      </div>
+      <button type="submit" class="submit_button" id="submit_button">Submit</button>
+   </main>
+
+   <script type="module" src="./js/create.js"></script>
+</body>
+
+</html>
