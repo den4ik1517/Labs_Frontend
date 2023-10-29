@@ -1,101 +1,59 @@
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="eu">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Lab 3</title>
-    <link rel="stylesheet" href="css/styles.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Lab 5</title>
+   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Taxi Manager</h1>
-        <nav class="header__nav">
-            <a onclick="toggleMainPage()">Home</a>
-            <a onclick="toggleCreatePage()">Create</a>
-        </nav>
-        <div class="search_block">
-            <input placeholder="Client name.." id="input_search">
-            <button type="button" id="search_btn" class="btn_card" style="width: 100px;">Search</button>
-            <button type="button" id="cancel_search_btn" class="cancel-button btn_card_cansel"
-                style="width: 100px;">Cancel</button>
-        </div>
-    </header>
-    <main id="main_page" class="main__container">
-        <div class="main__container manager">
-            <div class="sort-goods">
-                <h3>Sort orders by price</h3>
-                <label class="switch">
-                    <input type="checkbox" id="sort_objects">
-                    <span class="slider round"></span>
-                </label>
+   <header class="header_main">
+      <span> My app </span>
+      <nav class="nav_page">
+         <li>My Camera</li>
+         <li onclick="document.location.href='./create.html'">Create Camera</li>
+      </nav>
+      <div class="find_menu">
+         <input id="find_input" type="text" class="form-control" >
+         <button id="find_button" type="button" class="btn btn__find_button"> Find </button>
+         <button id="cancel_find_button" type="button" class="btn btn__cancel_find_button"> Cancel </button>
+      </div>
+   </header>
+   <main>
+      <aside>
+         <div class="sort_section">
+            <legend>
+               <h3>Sort by</h3>
+            </legend>
+            <div>
+               <input type="radio" value="nameOfManufacturer" id="name" name="property">
+               <label for="id"> Name </label>
             </div>
-            <div class="count-price">
-                <hr>
-                <div class="block_price">
-                    <h3>Count price of all orders:</h3>
-                    <span id="count_price"></span>
-                </div>
-                <button type="button" class="btn-primary btn_card" id="count_price_btn"
-                    style="width: 100px;">Count</button>
+            <div>
+               <input type="radio" value="memoryCapacity" id="memory" name="property">
+               <label for="memory"> Memory </label>
             </div>
-        </div>
-        <div class="main__container manager-orders">
-            <ul class="orders_list" id="orders_list">
-            </ul>
-        </div>
-    </main>
-    <main id="create_page" class="create_container">
-        <form id="add_form" class="add-form">
-            <h2>Create order for car</h2>
-            <div class="create-block">
-                <span>Client full name</span>
-                <input type="text" placeholder="Client name.." id="name_input">
-                <span>Destination</span>
-                <textarea type="text" placeholder="Destination.." id="destination_input"></textarea>
-                <span>Car brand:</span>
-                <select id="brand_input">
-                    <option value="Shkoda">Shkoda</option>
-                    <option value="Ford">Ford</option>
-                    <option value="Kia">Kia</option>
-                    <option value="Oppel">Oppel</option>
-                    <option value="Audi">Audi</option>
-                </select>
-                <span>Order date:</span>
-                <input type="date" id="order_date_input">
-                <span>Price:</span>
-                <input placeholder="Price in $" type="number" id="price_input">
+            <div>
+               <input type="radio" value="zoomFactor" id="zoom" name="property">
+               <label for="zoom"> Zoom </label>
             </div>
-            <button type="submit" class="btn-download" id="submit_btn">Add order</button>
-        </form>
-    </main>
-    <main id="edit_page" class="edit_container">
-        <form id="edit_form" class="add-form">
-            <h2>Edit order for car</h2>
-            <div class="create-block">
-                <span>Client full name</span>
-                <input type="text" placeholder="Client name.." id="edit_name_input">
-                <span>Destination</span>
-                <textarea type="text" placeholder="Destination.." id="edit_destination_input"></textarea>
-                <span>Car brand:</span>
-                <select id="edit_brand_input">
-                    <option value="Shkoda">Shkoda</option>
-                    <option value="Ford">Ford</option>
-                    <option value="Kia">Kia</option>
-                    <option value="Oppel">Oppel</option>
-                    <option value="Audi">Audi</option>
-                </select>
-                <span>Order date:</span>
-                <input type="date" id="edit_order_date_input">
-                <span>Price:</span>
-                <input placeholder="Price in $" type="number" id="edit_price_input">
-            </div>
-            <button type="submit" class="btn-download" id="edit_btn">Edit order</button>
-        </form>
-    </main>
-    <script src="js/index.js"></script>
+            <button type="button" id="sort_button">Sort</button>
+         </div>
+         <div class="count">
+            <h3> Count total amount of memory </h3>
+            <p id="count">
+            <p>
+               <button type="button" id="press"> Count </button>
+         </div>
+      </aside>
+
+      <ul id="items_container"></ul>
+   </main>
+
+   <script type="module" src="./js/index.js"></script>
 </body>
 
 </html>
